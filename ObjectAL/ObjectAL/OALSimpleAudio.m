@@ -664,6 +664,9 @@ initFailed:
 							 pan:(float) pan
 							loop:(bool) loop
 {
+	if(effectsMuted) {
+		return nil;
+	}
 	if(nil == filePath)
 	{
 		OAL_LOG_ERROR(@"filePath was NULL");
